@@ -1,4 +1,4 @@
-﻿<div class="home">
+<div class="home">
 <div class="text-center">
 
     <div class="vertical-space"></div>
@@ -8,9 +8,20 @@
     
     
     <div class="vertical-space"></div>
-    <div class="col-md-6 center-row">
-        <input name="url" type="url" placeholder="GitHub File or Directory Link" class="form-control" ng-model="url" ng-keypress="catchEnter($event)"></input>
+
+    <div class="urlList">
+        <div class="col-md-6 center-row">
+            <input name="url" type="url" placeholder="GitHub File or Directory Link" class="form-control" ng-model="url" ng-keypress="catchEnter($event)"></input>
+            <button type="button" class="btn btn-default" ng-click="window.alert('+')">+</button>
+        </div>
     </div>
+
+    <div class="input-group center-row">
+        <input name="file-name" type="text" placeholder="File Name" class="settings"></input>
+        <input name="root-dir" type="text" placeholder="Root Dir" class="settings"></input>
+        <button type="button" class="btn btn-outline-secondary" ng-click="window.alert('*')">*</button>
+    </div>
+
     <div class="btn-group center-row">
         <button type="button" class="btn btn-default" ng-click="createDownLink()">Create Download Link</button>
         <button type="button" class="btn btn-default" ng-click="download()">Download</button>
